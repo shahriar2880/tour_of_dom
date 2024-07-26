@@ -31,20 +31,28 @@
       
     </main>
     <script>
+      //---------- getElementByTagName---------------
       const liCollection = document.getElementsByTagName("li");
       for (const li of liCollection) {
         console.log(li.innerText);
       }
+      //---------- getElementByTagName---------------
       const allHeading = document.getElementsByTagName("h1");
       for (const li of allHeading) {
         console.log(li.innerText);
       }
+      //---------- getElementById---------------
       const tourTitle = document.getElementById('tour-title')
       console.log(tourTitle.innerText);
-
+//---------- getElementByClassName---------------
       const places = document.getElementsByClassName('important-places')
       for(const place of places){
         console.log(place.innerText)
+      }
+// ------------query selector all------------------
+      const querySelector = document.querySelectorAll('.important-places');
+      for(const query of querySelector){
+        console.log(query.innerText)
       }
     </script>
   </body>
