@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Of Dom</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM Tutorial</h1>
+    </header>
+    <main>
+      <section>
+        <h1>My awesome DOM!!</h1>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>DOM</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="tour-title">My Tour List!!</h1>
+        <ul>
+          <li class="important-places">Sundarban</li>
+          <li class="important-places">Cox's Bazar</li>
+          <li class="important-places">Bangla Bandha</li>
+          <li>Tetulia</li>
+        </ul>
+      </section>
+      
+    </main>
+    <script>
+      const liCollection = document.getElementsByTagName("li");
+      for (const li of liCollection) {
+        console.log(li.innerText);
+      }
+      const allHeading = document.getElementsByTagName("h1");
+      for (const li of allHeading) {
+        console.log(li.innerText);
+      }
+      const tourTitle = document.getElementById('tour-title')
+      console.log(tourTitle.innerText);
+
+      const places = document.getElementsByClassName('important-places')
+      for(const place of places){
+        console.log(place.innerText)
+      }
+    </script>
+  </body>
+</html>

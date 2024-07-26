@@ -1,0 +1,6 @@
+.navbar{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    background-color: royalblue;
+}
