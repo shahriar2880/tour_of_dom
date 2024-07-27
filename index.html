@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
     <title>Tour Of Dom</title>
   </head>
   <body>
@@ -20,45 +21,56 @@
         </ul>
       </section>
       <section>
-        <h1 id="tour-title">My Tour List!!</h1>
-        <ul>
+        <h1 id="tour-title" class="large-text">My Tour List!!</h1>
+        <ul >
           <li class="important-places">Sundarban</li>
           <li class="important-places">Cox's Bazar</li>
           <li class="important-places">Bangla Bandha</li>
           <li>Tetulia</li>
         </ul>
       </section>
-      
     </main>
     <script>
       //---------- getElementByTagName---------------
       const liCollection = document.getElementsByTagName("li");
       for (const li of liCollection) {
-        console.log(li.innerText);
+        //console.log(li.innerText);
       }
       //---------- getElementByTagName---------------
       const allHeading = document.getElementsByTagName("h1");
       for (const li of allHeading) {
-        console.log(li.innerText);
+        //console.log(li.innerText);
       }
       //---------- getElementById---------------
-      const tourTitle = document.getElementById('tour-title')
-      console.log(tourTitle.innerText);
-//---------- getElementByClassName---------------
-      const places = document.getElementsByClassName('important-places')
-      for(const place of places){
-        console.log(place.innerText)
+      const tourTitle = document.getElementById("tour-title");
+      //console.log(tourTitle.innerText);
+      //---------- getElementByClassName---------------
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        //console.log(place.innerText)
       }
-// ------------query selector all------------------
-      const querySelector = document.querySelectorAll('.important-places');
-      for(const query of querySelector){
-        console.log(query.innerText)
+      // ------------query selector all------------------
+      const querySelector = document.querySelectorAll(".important-places");
+      for (const query of querySelector) {
+        //console.log(query.innerText)
       }
-// ------------query selector------------------
-      const oneSelector = document.querySelector('#tour-title');
-      for(const query of oneSelector){
-        console.log(query)
+      // ------------query selector------------------
+      // const oneSelector = document.querySelector("#tour-title");
+      // for (const query of oneSelector) {
+      //   //console.log(query)
+      // }
+
+      const sections = document.querySelectorAll("section");
+      for (const section of sections) {
+        console.log(section);
+        section.style.border ='2px solid red'
+        section.style.fontSize ='15px'
+        section.style.padding ='15px'
+        section.style.marginBottom ='5px'
       }
+      const placeContainer = document.getElementById('tour-title');
+      placeContainer.classList.add('text-center');
+      placeContainer.classList.remove('large-text')
       
     </script>
   </body>
