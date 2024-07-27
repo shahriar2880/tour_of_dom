@@ -10,7 +10,7 @@
     <header>
       <h1>Welcome to my DOM Tutorial</h1>
     </header>
-    <main>
+    <main id="main-container">
       <section>
         <h1>My awesome DOM!!</h1>
         <ul>
@@ -22,7 +22,7 @@
       </section>
       <section>
         <h1 id="tour-title" class="large-text">My Tour List!!</h1>
-        <ul >
+        <ul id="places-list">
           <li class="important-places">Sundarban</li>
           <li class="important-places">Cox's Bazar</li>
           <li class="important-places">Bangla Bandha</li>
@@ -60,6 +60,59 @@
       //   //console.log(query)
       // }
 
+      
+      const placeContainer = document.getElementById('tour-title');
+      placeContainer.classList.add('text-center');
+      placeContainer.classList.remove('large-text')
+      
+      //----Create HTML Elements Using Javascript And AppendChild--
+      const placesList = document.getElementById('places-list');
+      const li = document.createElement('li');
+      li.innerText = 'Banbdarban';
+      placesList.appendChild(li);
+
+
+      const mainContainer = document.getElementById('main-container');
+
+      const section = document.createElement('section');
+      const h1 = document.createElement('h1');
+      h1.innerText = 'My Food List';
+      section.appendChild(h1);
+
+      const ul = document.createElement('ul');
+
+      const li1 = document.createElement('li');
+      li1.innerText = 'Biryani';
+      ul.appendChild(li1);
+
+      const li2 = document.createElement('li');
+      li2.innerText = 'Borhani';
+      ul.appendChild(li2);
+      
+      const li3 = document.createElement('li');
+      li3.innerText = 'Kabab';
+      ul.appendChild(li3);
+      
+      const li4 = document.createElement('li');
+      li4.innerText = 'Pasta';
+      ul.appendChild(li4);
+
+      section.appendChild(ul);
+      mainContainer.appendChild(section)
+
+      //------set html directly--
+      const sectionDress = document.createElement('section');
+      sectionDress.innerHTML = `
+      <h1> My dress Section</h1>
+      <ul>
+        <li>T-shirt</li>
+        <li>T-shirt</li>
+        <li>T-shirt</li>
+      </ul>
+      `
+      mainContainer.appendChild(sectionDress);
+
+//-- style the sections
       const sections = document.querySelectorAll("section");
       for (const section of sections) {
         console.log(section);
@@ -68,10 +121,6 @@
         section.style.padding ='15px'
         section.style.marginBottom ='5px'
       }
-      const placeContainer = document.getElementById('tour-title');
-      placeContainer.classList.add('text-center');
-      placeContainer.classList.remove('large-text')
-      
     </script>
   </body>
 </html>
