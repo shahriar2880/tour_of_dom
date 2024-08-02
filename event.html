@@ -15,6 +15,7 @@
     <button onclick="makeGreen()">Make Green</button>
     <button onclick="makeBlue()">Make Blue</button>
     <button onclick="makeSkyBlue()">Make SkyBlue</button>
+    <button id="make-goldenrod">Make GoldenRod</button>
     <script>
         function makeRed(){
             document.body.style.backgroundColor ='red';
@@ -28,6 +29,10 @@
         function makeSkyBlue(){
             document.body.style.backgroundColor ='skyblue';
         }
+        //final version
+        document.getElementById('make-goldenrod').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'goldenrod'
+        }) 
     </script>
 </body>
 </html>
