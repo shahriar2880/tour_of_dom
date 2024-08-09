@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Summary</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <p id="input-text-display">Default Input Field</p>
+    <input type="text" name="" id="input-field">
+    <button id="btn-update">Update</button>
+    <h3 id="handler-status">Default Text</h3>
+    <h3 id="press-status">Default Text 1</h3>
+    <button onclick="handleOnClick()">Handle event by add onclick function</button>
+    <button onclick="handlePress()">Handle event by add press</button>
+    <script>
+        function handleOnClick(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handle By Function Attached On OnClick Attribute';
+        }
+        function handlePress(){
+            const handlerStatus = document.getElementById('press-status');
+            handlerStatus.innerText = 'This is a Press Button';
+        }
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+        })
+    </script>
+</body>
+</html>
