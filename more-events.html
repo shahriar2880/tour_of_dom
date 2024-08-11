@@ -8,8 +8,15 @@
 <body>
     <h1>Explore more Events</h1>
     <button id="btn-more">Events</button>
+    <input type="text" id="input-field">
     <script>
-        document.getElementById('btn-more').addEventListener('click', function(){
+        document.getElementById('input-field').addEventListener('focus', function(){
+            console.log('Event Triggered in focus')
+        })
+        document.getElementById('input-field').addEventListener('blur', function(){
+            console.log('Event Triggered in blur')
+        })
+        document.getElementById('btn-more').addEventListener('mousemove', function(){
             console.log('Event Triggered')
         })
     </script>
