@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Exploring Event Bubble</h1>
-    <section>
+    <section id="list-container">
       <ul id="list-ul">
         <li id="item-1">Lorem ipsum dolor sit amet.</li>
         <li id="item-2">dolor sit amet.</li>
@@ -23,6 +23,9 @@
         });
         document.getElementById('list-ul').addEventListener('click',function(){
             console.log('ul clicked');
+        });
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log('list-container clicked');
         })
     </script>
   </body>
